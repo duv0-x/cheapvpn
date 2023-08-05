@@ -1,10 +1,10 @@
 terraform {
   required_version = "~> 1.5"
   backend "s3" {
-    bucket         = var.terraform_state_bucket
-    key            = "${var.project_name}/terraform.state"
-    region         = var.region
-    dynamodb_table = var.terraform_state_dynamo_table
+    bucket         = "duv0-x-terraform-state"
+    key            = "cheapvpn/terraform.state"
+    region         = "us-west-2"
+    dynamodb_table = "duv0-x-terraform-state"
     encrypt        = true
     profile        = "duv0-x"
   }
